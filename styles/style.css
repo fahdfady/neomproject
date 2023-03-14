@@ -1,12 +1,18 @@
 @import url("reset.css");
 @import url("bootstrap-grid.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;500;600;700&family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap");
 ::-moz-selection {
   background: #4e052d;
 }
 ::selection {
   background: #4e052d;
+}
+
+:root {
+  --primary-color: #221042;
+  --secondary-color: #C14076;
+  --tertiary-color: #3F3889;
 }
 
 * {
@@ -18,7 +24,7 @@
 body {
   font-size: 16px;
   background: #222;
-  font-family: "Kanit", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   text-transform: capitalize;
 }
 
@@ -40,7 +46,7 @@ header nav {
   height: 110px;
   background: transparent;
   border-bottom: 1px solid #686868;
-  transition: background-color 0.12s ease-in-out;
+  transition: background-color 0.12s ease;
   display: flex;
   align-items: center;
 }
@@ -54,9 +60,8 @@ header nav .navbar-container {
   flex-wrap: wrap;
   gap: 26px;
 }
-header nav .logo {
-  font-size: 28px;
-  color: #e4499f;
+header nav .logo img {
+  width: 200px;
 }
 header nav ul {
   display: flex;
@@ -96,7 +101,7 @@ header nav ul li a + *.active {
 }
 header nav ul li a:hover, header nav ul li a:focus {
   color: #fff;
-  box-shadow: inset 300px 0 0 0 #630037;
+  box-shadow: inset 300px 0 0 0 var(--secondary-color);
 }
 
 section.banner {
@@ -174,6 +179,7 @@ section.banner .layer .blob.blob-4 {
 
 .nav-services {
   padding: 12px 20px;
+  flex-direction: column;
 }
 .nav-services .services-container {
   display: flex;
@@ -181,9 +187,10 @@ section.banner .layer .blob.blob-4 {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 36px;
 }
 .nav-services .services-container .service {
-  width: calc(28% - 10px);
+  width: 400px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -202,20 +209,20 @@ section.banner .layer .blob.blob-4 {
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 0px dotted rgba(237, 43, 140, 0.7607843137);
+  border: 0px dotted var(--secondary-color);
   border-radius: 100%;
   transition: border-width 0.08s linear;
   transform: translate(-50%, -50%);
 }
 .nav-services .services-container .service i {
   font-size: 60px;
-  color: #5f4b93;
+  color: #612dbd;
 }
 .nav-services .services-container .service h2 {
   font-size: 32px;
 }
 .nav-services .services-container .service .service-info {
-  padding: 30px 0px;
+  padding: 18px 0px 32px 0px;
   border-radius: 40px;
   display: flex;
   flex-direction: column;
@@ -236,5 +243,5 @@ section.banner .layer .blob.blob-4 {
   opacity: 1;
 }
 .nav-services .services-container .service:hover .service-info, .nav-services .services-container .service:focus .service-info {
-  background: linear-gradient(180deg, rgba(237, 43, 140, 0.759) 0%, rgba(237, 43, 140, 0) 100%);
+  background: linear-gradient(180deg, rgba(193, 64, 118, 0.862745098) 0%, rgba(237, 43, 140, 0) 100%);
 }/*# sourceMappingURL=style.css.map */

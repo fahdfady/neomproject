@@ -58,4 +58,5 @@ for (let i = 0; i < navLink.length; i++) {
         }
     };
 
+    navLinkDropdown[i].style.bottom = -navLinkDropdown[i].clientHeight - 40;  
 };
