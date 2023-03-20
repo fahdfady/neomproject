@@ -34,13 +34,16 @@ for (let i = 0; i < navLink.length; i++) {
 
         navLinkDropdown.forEach((item) => {
             item.classList.remove('active');
-            item.classList.remove("is-open")
+            item.style.bottom = 999999999999999999999;
         });
 
-        navLinkDropdown[i].classList.add("is-open");
         setTimeout(() => {
             navLinkDropdown[i].classList.add('active');
+            navLinkDropdown[i].style.bottom = -navLinkDropdown[i].offsetHeight;
         }, 1);
+
+
+
 
         nav.onmouseover = () => {
             nav.classList.add("active");
@@ -51,12 +54,25 @@ for (let i = 0; i < navLink.length; i++) {
 
             navLinkDropdown.forEach((item) => {
                 item.classList.remove('active');
-                setTimeout(() => {
-                    item.classList.remove("is-open");
-                }, 100);
+                item.style.bottom = 999999999999999999999;
             });
         }
     };
 
-    navLinkDropdown[i].style.bottom = -navLinkDropdown[i].clientHeight - 40;  
 };
+
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 5
+        }
+    }
+})
