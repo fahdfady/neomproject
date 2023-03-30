@@ -99,12 +99,12 @@
                 <section class="banner">
                     <div class="layer">
                         <video autoplay muted loop id="bannerVideo">
-                            <source src="./assets/banner.webm" type="video/mp4">
+                            <!-- <source src="./assets/banner.webm" type="video/mp4"> -->
                         </video>
 
                         <div class="layer-container">
-                            <h1>lorem ipsum dolor</h1>
-                            <p>
+                            <h1 class="wow animate__fadeInUp" data-wow-duration=".35s">lorem ipsum dolor</h1>
+                            <p class="wow animate__fadeInUp" data-wow-duration=".5s">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis voluptatibus necessitatibus iusto, dignissimos ipsum odit ex, incidunt aliquam natus, est voluptate. Nihil nesciunt ipsum odit quibusdam harum dicta assumenda soluta?
                             </p>
                         </div>
@@ -114,14 +114,17 @@
 
         </div>
 
-        <footer class=" page-footer ">
-            <div class="footer-container ">
+        <footer class="page-footer">
+            <div class="footer-container">
 
             </div>
         </footer>
     </div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="scripts/script.js"></script>
 </body>
 

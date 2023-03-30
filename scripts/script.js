@@ -1,20 +1,4 @@
-const bannerBlob = document.querySelectorAll(".blob");
 
-// onmousemove = (MouseEvent) => {
-//     let divide = 40;
-
-//     let x = MouseEvent.clientX / divide;
-//     let y = MouseEvent.clientY / divide;
-
-//     let x2 = -MouseEvent.clientX / divide;
-//     let y2 = -MouseEvent.clientY / divide;
-
-//     for (let i = 0; i < bannerBlob.length; i++) {};
-
-//     bannerBlob[0].style.transform = "translate3d(" + x2 + 'px,' + y2 + 'px, 0px)';
-//     bannerBlob[1].style.transform = "translate3d(" + x + 'px,' + y2 + 'px, 0px)';
-//     bannerBlob[2].style.transform = "translate3d(" + x + 'px,' + y + 'px, 0px)';
-// };
 
 const nav = document.querySelector("nav");
 const header = document.querySelector("header");
@@ -61,3 +45,12 @@ for (let i = 0; i < navLink.length; i++) {
 
 };
 
+let addlogoFile = document.querySelector('.text input[type="file"]');
+let addlogo = document.querySelector(".text label img");
+
+addlogoFile.onchange = event => {
+    const [file] = addlogoFile.files
+    if(file){
+        addlogo.src = URL.createObjectURL(file)
+    }
+}
