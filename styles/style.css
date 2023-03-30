@@ -265,7 +265,8 @@ section.partners {
   background: url("../assets/orchestra.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 10px 0;
+  margin: 0;
+  height: 100vh;
 }
 section.partners .layer {
   padding: 32px 8px;
